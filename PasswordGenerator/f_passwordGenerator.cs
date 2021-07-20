@@ -106,26 +106,29 @@ namespace PasswordGenerator
                     case 'R':
                         numbers += "18";
                         break;
-                    case 'T':
+                    case 'S':
                         numbers += "19";
                         break;
-                    case 'U':
+                    case 'T':
                         numbers += "20";
                         break;
-                    case 'V':
+                    case 'U':
                         numbers += "21";
                         break;
-                    case 'W':
+                    case 'V':
                         numbers += "22";
                         break;
-                    case 'X':
+                    case 'W':
                         numbers += "23";
                         break;
-                    case 'Y':
+                    case 'X':
                         numbers += "24";
                         break;
-                    case 'Z':
+                    case 'Y':
                         numbers += "25";
+                        break;
+                    case 'Z':
+                        numbers += "26";
                         break;
                 }
             }
