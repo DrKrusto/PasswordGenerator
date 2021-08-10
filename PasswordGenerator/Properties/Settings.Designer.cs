@@ -46,5 +46,17 @@ namespace PasswordGenerator.Properties {
                 this["otherchar"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Simple")]
+        public string typeOfGeneration {
+            get {
+                return ((string)(this["typeOfGeneration"]));
+            }
+            set {
+                this["typeOfGeneration"] = value;
+            }
+        }
     }
 }

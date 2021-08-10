@@ -35,12 +35,13 @@ namespace PasswordGenerator
             this.tb_partOfPassword = new System.Windows.Forms.TextBox();
             this.tb_specialChar = new System.Windows.Forms.TextBox();
             this.btn_save = new System.Windows.Forms.Button();
+            this.lb_typeOfGeneration = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // lbl_partOfPassword
             // 
             this.lbl_partOfPassword.AutoSize = true;
-            this.lbl_partOfPassword.Location = new System.Drawing.Point(12, 20);
+            this.lbl_partOfPassword.Location = new System.Drawing.Point(12, 96);
             this.lbl_partOfPassword.Name = "lbl_partOfPassword";
             this.lbl_partOfPassword.Size = new System.Drawing.Size(242, 20);
             this.lbl_partOfPassword.TabIndex = 0;
@@ -49,7 +50,7 @@ namespace PasswordGenerator
             // lbl_specialChar
             // 
             this.lbl_specialChar.AutoSize = true;
-            this.lbl_specialChar.Location = new System.Drawing.Point(12, 67);
+            this.lbl_specialChar.Location = new System.Drawing.Point(12, 143);
             this.lbl_specialChar.Name = "lbl_specialChar";
             this.lbl_specialChar.Size = new System.Drawing.Size(198, 20);
             this.lbl_specialChar.TabIndex = 1;
@@ -59,7 +60,7 @@ namespace PasswordGenerator
             // 
             this.tb_partOfPassword.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tb_partOfPassword.Location = new System.Drawing.Point(260, 17);
+            this.tb_partOfPassword.Location = new System.Drawing.Point(260, 93);
             this.tb_partOfPassword.Name = "tb_partOfPassword";
             this.tb_partOfPassword.PasswordChar = '*';
             this.tb_partOfPassword.Size = new System.Drawing.Size(325, 26);
@@ -69,7 +70,7 @@ namespace PasswordGenerator
             // 
             this.tb_specialChar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tb_specialChar.Location = new System.Drawing.Point(216, 64);
+            this.tb_specialChar.Location = new System.Drawing.Point(216, 140);
             this.tb_specialChar.MaxLength = 1;
             this.tb_specialChar.Name = "tb_specialChar";
             this.tb_specialChar.PasswordChar = '*';
@@ -80,7 +81,7 @@ namespace PasswordGenerator
             // 
             this.btn_save.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btn_save.Enabled = false;
-            this.btn_save.Location = new System.Drawing.Point(84, 111);
+            this.btn_save.Location = new System.Drawing.Point(84, 180);
             this.btn_save.Name = "btn_save";
             this.btn_save.Size = new System.Drawing.Size(432, 43);
             this.btn_save.TabIndex = 4;
@@ -88,11 +89,22 @@ namespace PasswordGenerator
             this.btn_save.UseVisualStyleBackColor = true;
             this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
             // 
+            // lb_typeOfGeneration
+            // 
+            this.lb_typeOfGeneration.FormattingEnabled = true;
+            this.lb_typeOfGeneration.ItemHeight = 20;
+            this.lb_typeOfGeneration.Location = new System.Drawing.Point(12, 12);
+            this.lb_typeOfGeneration.Name = "lb_typeOfGeneration";
+            this.lb_typeOfGeneration.Size = new System.Drawing.Size(573, 64);
+            this.lb_typeOfGeneration.TabIndex = 5;
+            this.lb_typeOfGeneration.SelectedIndexChanged += new System.EventHandler(this.lb_typeOfGeneration_SelectedIndexChanged);
+            // 
             // f_options
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(597, 170);
+            this.ClientSize = new System.Drawing.Size(597, 239);
+            this.Controls.Add(this.lb_typeOfGeneration);
             this.Controls.Add(this.btn_save);
             this.Controls.Add(this.tb_specialChar);
             this.Controls.Add(this.tb_partOfPassword);
@@ -114,5 +126,6 @@ namespace PasswordGenerator
         private System.Windows.Forms.TextBox tb_partOfPassword;
         private System.Windows.Forms.TextBox tb_specialChar;
         private System.Windows.Forms.Button btn_save;
+        private System.Windows.Forms.ListBox lb_typeOfGeneration;
     }
 }

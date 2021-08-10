@@ -8,5 +8,8 @@
     <Setting Name="otherchar" Type="System.Char" Scope="User">
       <Value Profile="(Default)">!</Value>
     </Setting>
+    <Setting Name="typeOfGeneration" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Simple</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

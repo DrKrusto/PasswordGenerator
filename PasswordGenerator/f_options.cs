@@ -15,10 +15,18 @@ namespace PasswordGenerator
         public f_options()
         {
             InitializeComponent();
+            this.InitializeTypeOfGeneration();
             this.tb_partOfPassword.Text = Properties.Settings.Default.firstpartofpwd;
             this.tb_specialChar.Text = Convert.ToString(Properties.Settings.Default.otherchar);
             this.tb_partOfPassword.TextChanged += Tb_partOfPassword_TextChanged;
             this.tb_specialChar.TextChanged += Tb_specialChar_TextChanged;
+        }
+
+        private void InitializeTypeOfGeneration()
+        {
+            this.lb_typeOfGeneration.Items.Add("Simple");
+            this.lb_typeOfGeneration.Items.Add("Complex");
+            this.lb_typeOfGeneration.SelectedItem = Properties.Settings.Default.typeOfGeneration;
         }
 
         private void Tb_specialChar_TextChanged(object sender, EventArgs e)
@@ -65,8 +73,14 @@ namespace PasswordGenerator
                 Properties.Settings.Default.firstpartofpwd = this.tb_partOfPassword.Text;
             if (this.tb_specialChar.Text.Trim() != "")
                 Properties.Settings.Default.otherchar = this.tb_specialChar.Text[0];
+            Properties.Settings.Default.typeOfGeneration = (string)this.lb_typeOfGeneration.SelectedItem;
             Properties.Settings.Default.Save();
             this.Close();
+        }
+
+        private void lb_typeOfGeneration_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            this.Tb_partOfPassword_TextChanged(null, null);
         }
     }
 }
